@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blacklist Admin Panel</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 8px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h1>Admin Panel - Blacklisted HWIDs</h1>
+  <table>
+    <thead>
+      <tr><th>HWID</th><th>Reason</th></tr>
+    </thead>
+    <tbody>
+      {% for hwid, reason in entries %}
+      <tr><td>{{ hwid }}</td><td>{{ reason }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
